@@ -47,10 +47,6 @@ class LimitAwaitOpenAIEmbeddings(Embeddings):
     def model(self) -> str:
         return self.openai_embeddings.model
     
-    @model.setter
-    def model(self, value: str) -> None:
-        self.openai_embeddings.model = value
-
     def get_num_tokens(self, texts: List[str]) -> int:
         """
         Count tokens in texts
